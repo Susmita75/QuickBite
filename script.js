@@ -1,5 +1,5 @@
 // Shopping Cart Management
-let cart = JSON.parse(localStorage.getItem('quickbite-cart')) || [];
+let cart = JSON.parse(localStorage.getItem("quickbite-cart")) || [];
 
 // Initialize page
 document.addEventListener('DOMContentLoaded', function() {
