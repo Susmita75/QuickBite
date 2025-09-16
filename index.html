@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon.png" type="image/png">
+    <title>QuickBite - Fast Food Delivery</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>🍔 QuickBite</h2>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <span id="cart-count">0</span>
+                <a href="checkout.html">🛒</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Delicious Food Delivered Fast</h1>
+            <p>Order your favorite meals from the best restaurants in town. Fresh, fast, and delivered to your door! Choose from a wide range of cuisines—pizza, burgers, salads, and desserts, all in one place.</p>
+            <div class="hero-buttons">
+                <a href="menu.html" class="btn btn-primary">Order Now</a>
+                <a href="#featured" class="btn btn-secondary">View Menu</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="food-showcase">
+                <div class="food-item">🍕</div>
+                <div class="food-item">🍔</div>
+                <div class="food-item">🥗</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Dishes Section -->
+    <section id="featured" class="featured-section">
+        <div class="container">
+            <h2>Featured Dishes</h2>
+            <p class="section-subtitle">Our most popular items that customers love. From cheesy delights to sweet indulgences, these dishes have earned their spot on the favorites list.</p>
+            <div class="featured-grid">
+                <div class="dish-card" data-item="margherita-pizza">
+                    <div class="dish-image">🍕</div>
+                    <h3>Margherita Pizza</h3>
+                    <p>Fresh mozzarella, tomatoes, and basil on crispy crust</p>
+                    <div class="price">Rs: 799</div>
+                    <button class="add-to-cart" onclick="addToCart('margherita-pizza', 'Margherita Pizza', 799)">Add to Cart</button>
+                </div>
+                <div class="dish-card" data-item="classic-burger">
+                    <div class="dish-image">🍔</div>
+                    <h3>Classic Burger</h3>
+                    <p>Juicy beef patty with lettuce, tomato, and special sauce</p>
+                    <div class="price">Rs: 699</div>
+                    <button class="add-to-cart" onclick="addToCart('classic-burger', 'Classic Burger', 699)">Add to Cart</button>
+                </div>
+                <div class="dish-card" data-item="caesar-salad">
+                    <div class="dish-image">🥗</div>
+                    <h3>Caesar Salad</h3>
+                    <p>Crisp romaine lettuce with parmesan and croutons</p>
+                    <div class="price">Rs: 495</div>
+                    <button class="add-to-cart" onclick="addToCart('caesar-salad', 'Caesar Salad', 495)">Add to Cart</button>
+                </div>
+                <div class="dish-card" data-item="chocolate-cake">
+                    <div class="dish-image">🍰</div>
+                    <h3>Chocolate Cake</h3>
+                    <p>Rich chocolate cake with creamy frosting</p>
+                    <div class="price">Rs: 425</div>
+                    <button class="add-to-cart" onclick="addToCart('chocolate-cake', 'Chocolate Cake', 425)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2>Why Choose QuickBite?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Fast Delivery</h3>
+                    <p>Get your food delivered in 30-45 minutes or less</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🍽️</div>
+                    <h3>Fresh Food</h3>
+                    <p>All meals prepared fresh with quality ingredients</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Easy Ordering</h3>
+                    <p>Simple and intuitive ordering process</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>QuickBite</h3>
+                    <ul>
+                        <li><p>Delivering happiness one meal at a time</p></li>
+                        <li><p>Your favorite meals, crafted with love and delivered fresh to your doorstep.</p></li>
+                        <li><p>QuickBite – because great food makes great moments.</p></li>
+                        <li><p>Hygiene and safety are at the heart of everything we prepare.</p></li>
+                        <li><p>Every bite is a promise of quality and care.</p></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="menu.html">Menu</a></li>  
+                        <li><a href="contact.html">Contact</a></li>   
+                        <li><a href="checkout.html">Checkout</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📞 +91 8159056500</p>
+                    <p>📧 susmita@quickbite.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 QuickBite. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

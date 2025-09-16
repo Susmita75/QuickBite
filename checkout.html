@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon.png" type="image/png">
+    <title>Checkout - QuickBite</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>🍔 QuickBite</h2>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="checkout.html" class="active">Checkout</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <span id="cart-count">0</span>
+                <a href="checkout.html">🛒</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Checkout Section -->
+    <section class="checkout-section">
+        <div class="container">
+            <h1>Checkout</h1>
+            
+            <div class="checkout-container">
+                <!-- Cart Summary -->
+                <div class="cart-summary">
+                    <h2>Your Order</h2>
+                    <div id="cart-items">
+                        <div class="empty-cart">
+                            <p>Your cart is empty</p>
+                            <a href="menu.html" class="btn btn-primary">Browse Menu</a>
+                        </div>
+                    </div>
+                    <div class="cart-total">
+                        <div class="total-row">
+                            <span>Subtotal:</span>
+                            <span id="subtotal">0.00</span>
+                        </div>
+                        <div class="total-row">
+                            <span>Delivery Fee:</span>
+                            <span id="delivery-fee">100.00</span>
+                        </div>
+                        <div class="total-row">
+                            <span>Tax:</span>
+                            <span id="tax">0.00</span>
+                        </div>
+                        <div class="total-row final-total">
+                            <span>Total:</span>
+                            <span id="final-total">0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Form -->
+                <div class="order-form">
+                    <h2>Delivery Information</h2>
+                    <form id="checkout-form">
+                        <div class="form-group">
+                            <label for="customer-name">Full Name *</label>
+                            <input type="text" id="customer-name" name="customerName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="customer-email">Email *</label>
+                            <input type="email" id="customer-email" name="customerEmail" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="customer-phone">Phone Number *</label>
+                            <input type="tel" id="customer-phone" name="customerPhone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="delivery-address">Delivery Address *</label>
+                            <textarea id="delivery-address" name="deliveryAddress" rows="3" required placeholder="Street address, apartment number, city, state, zip code"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="delivery-instructions">Special Instructions</label>
+                            <textarea id="delivery-instructions" name="deliveryInstructions" rows="2" placeholder="Any special delivery instructions..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="payment-method">Payment Method *</label>
+                            <select id="payment-method" name="paymentMethod" required>
+                                <option value="">Select payment method</option>
+                                <option value="credit-card">Credit Card</option>
+                                <option value="debit-card">Debit Card</option>
+                                <option value="cash">Cash on Delivery</option>
+                            </select>
+                        </div>
+
+                        <div class="payment-info" id="card-info" style="display: none;">
+                            <div class="form-group">
+                                <label for="card-number">Card Number *</label>
+                                <input type="text" id="card-number" name="cardNumber" placeholder="1234 5678 9012 3456">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="expiry-date">Expiry Date *</label>
+                                    <input type="text" id="expiry-date" name="expiryDate" placeholder="MM/YY">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cvv">CVV *</label>
+                                    <input type="text" id="cvv" name="cvv" placeholder="123">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary" onclick="clearCart()">Clear Cart</button>
+                            <button type="submit" class="btn btn-primary" id="place-order-btn" disabled>Place Order</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Success Modal -->
+    <div id="order-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h2>🎉 Order Placed Successfully!</h2>
+            <p>Thank you for your order. Your delicious food will be delivered within 30-45 minutes.</p>
+            <p><strong>Order ID:</strong> <span id="order-id"></span></p>
+            <div class="modal-actions">
+                <button class="btn btn-primary" onclick="closeModal()">Continue Shopping</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>QuickBite</h3>
+                    <ul>
+                        <li><p>Delivering happiness one meal at a time</p></li>
+                        <li><p>Your favorite meals, crafted with love and delivered fresh to your doorstep.</p></li>
+                        <li><p>QuickBite – because great food makes great moments.</p></li>
+                        <li><p>Hygiene and safety are at the heart of everything we prepare.</p></li>
+                        <li><p>Every bite is a promise of quality and care.</p></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📞 +91 8159056500</p>
+                    <p>📧 susmita@quickbite.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 QuickBite. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

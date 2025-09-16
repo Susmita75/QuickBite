@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon.png" type="image/png">
+    <title>Menu - QuickBite</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>🍔 QuickBite</h2>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html" class="active">Menu</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <span id="cart-count">0</span>
+                <a href="checkout.html">🛒</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu Header -->
+    <section class="menu-header">
+        <div class="container">
+            <h1>Our Menu</h1>
+            <p>Every dish is made with the freshest ingredients, ensuring rich flavors and perfect taste in every bite.Delicious, wholesome, and delivered hot—our meals are made to brighten your day.</p>
+        </div>
+    </section>
+
+    <!-- Menu Categories -->
+    <section class="menu-section">
+        <div class="container">
+            <!-- Category Filter -->
+            <div class="category-filter">
+                <button class="filter-btn active" onclick="filterMenu('all')">All</button>
+                <button class="filter-btn" onclick="filterMenu('pizza')">Pizzas</button>
+                <button class="filter-btn" onclick="filterMenu('burgers')">Burgers</button>
+                <button class="filter-btn" onclick="filterMenu('salads')">Salads</button>
+                <button class="filter-btn" onclick="filterMenu('desserts')">Desserts</button>
+            </div>
+
+            <!-- Menu Items Grid -->
+            <div class="menu-grid">
+                <!-- Pizza Items -->
+                <div class="menu-item" data-category="pizza">
+                    <div class="item-image">🍕</div>
+                    <div class="item-info">
+                        <h3>Margherita Pizza</h3>
+                        <p>Fresh mozzarella, tomatoes, and basil on crispy crust</p>
+                        <div class="item-price">Rs: 799</div>
+                        <button class="add-to-cart" onclick="addToCart('margherita-pizza', 'Margherita Pizza', 799)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="pizza">
+                    <div class="item-image">🍕</div>
+                    <div class="item-info">
+                        <h3>Pepperoni Pizza</h3>
+                        <p>Classic pepperoni with mozzarella cheese</p>
+                        <div class="item-price">Rs: 899</div>
+                        <button class="add-to-cart" onclick="addToCart('pepperoni-pizza', 'Pepperoni Pizza', 899)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="pizza">
+                    <div class="item-image">🍕</div>
+                    <div class="item-info">
+                        <h3>Veggie Supreme</h3>
+                        <p>Bell peppers, mushrooms, olives, and onions</p>
+                        <div class="item-price">Rs: 749</div>
+                        <button class="add-to-cart" onclick="addToCart('veggie-pizza', 'Veggie Supreme', 749)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="pizza">
+                    <div class="item-image">🍕</div>
+                    <div class="item-info">
+                        <h3>BBQ Chicken Pizza</h3>
+                        <p>Grilled chicken, BBQ sauce, onions, and cheese</p>
+                        <div class="item-price">Rs: 999</div>
+                        <button class="add-to-cart" onclick="addToCart('bbq-chicken-pizza', 'BBQ Chicken Pizza', 999)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="pizza">
+                    <div class="item-image">🍕</div>
+                    <div class="item-info">
+                        <h3>Paneer Tikka Pizza</h3>
+                        <p>Spicy paneer tikka, capsicum, and onion</p>
+                        <div class="item-price">Rs: 849</div>
+                        <button class="add-to-cart" onclick="addToCart('paneer-pizza', 'Paneer Tikka Pizza', 849)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="pizza">
+                    <div class="item-image">🍕</div>
+                    <div class="item-info">
+                        <h3>Hawaiian Pizza</h3>
+                        <p>Cheese pizza topped with pineapple & ham</p>
+                        <div class="item-price">Rs: 899</div>
+                        <button class="add-to-cart" onclick="addToCart('hawaiian', 'Hawaiian Pizza', 899)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="pizza">
+                    <div class="item-image">🍕</div>
+                    <div class="item-info">
+                        <h3>Mexican Green Wave</h3>
+                        <p>Spicy jalapeños, onion, capsicum</p>
+                        <div class="item-price">Rs: 849</div>
+                        <button class="add-to-cart" onclick="addToCart('mexican', 'Mexican Green Wave', 849)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="pizza">
+                    <div class="item-image">🍕</div>
+                    <div class="item-info">
+                        <h3>Four Cheese Pizza</h3>
+                        <p>Loaded with mozzarella, cheddar, parmesan, gouda</p>
+                        <div class="item-price">Rs: 999</div>
+                        <button class="add-to-cart" onclick="addToCart('fourcheese', 'Four Cheese Pizza', 999)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="pizza">
+                    <div class="item-image">🍕</div>
+                    <div class="item-info">
+                        <h3>Farmhouse Pizza</h3>
+                        <p>Onion, capsicum, tomato, mushroom</p>
+                        <div class="item-price">Rs: 799</div>
+                        <button class="add-to-cart" onclick="addToCart('farmhouse', 'Farmhouse Pizza', 799)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="pizza">
+                    <div class="item-image">🍕</div>
+                    <div class="item-info">
+                        <h3>Seafood Pizza</h3>
+                        <p>Loaded with shrimp, tuna & herbs</p>
+                        <div class="item-price">Rs: 1049</div>
+                        <button class="add-to-cart" onclick="addToCart('seafood', 'Seafood Pizza', 1049)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Burger Items -->
+                <div class="menu-item" data-category="burgers">
+                    <div class="item-image">🍔</div>
+                    <div class="item-info">
+                        <h3>Classic Burger</h3>
+                        <p>Juicy beef patty with lettuce, tomato, and special sauce</p>
+                        <div class="item-price">Rs: 699</div>
+                        <button class="add-to-cart" onclick="addToCart('classic-burger', 'Classic Burger', 699)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="burgers">
+                    <div class="item-image">🍔</div>
+                    <div class="item-info">
+                        <h3>Cheese Burger</h3>
+                        <p>Double cheese with beef patty and pickles</p>
+                        <div class="item-price">Rs: 799</div>
+                        <button class="add-to-cart" onclick="addToCart('cheese-burger', 'Cheese Burger', 799)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="burgers">
+                    <div class="item-image">🍔</div>
+                    <div class="item-info">
+                        <h3>Bacon Deluxe</h3>
+                        <p>Crispy bacon, cheese, and BBQ sauce</p>
+                        <div class="item-price">Rs: 749</div>
+                        <button class="add-to-cart" onclick="addToCart('bacon-burger', 'Bacon Deluxe', 749)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="burgers">
+                    <div class="item-image">🍔</div>
+                    <div class="item-info">
+                        <h3>Veggie Burger</h3>
+                        <p>Grilled veggie patty with mayo</p>
+                        <div class="item-price">Rs: 599</div>
+                        <button class="add-to-cart" onclick="addToCart('veggie-burger', 'Veggie Burger', 599)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="burgers">
+                    <div class="item-image">🍔</div>
+                    <div class="item-info">
+                        <h3>Spicy Chicken Burger</h3>
+                        <p>Fried chicken with spicy mayo</p>
+                        <div class="item-price">Rs: 649</div>
+                        <button class="add-to-cart" onclick="addToCart('spicy-chicken', 'Spicy Chicken Burger', 649)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="burgers">
+                    <div class="item-image">🍔</div>
+                    <div class="item-info">
+                        <h3>Double Decker Burger</h3>
+                        <p>Two patties stacked with cheese</p>
+                        <div class="item-price">Rs: 899</div>
+                        <button class="add-to-cart" onclick="addToCart('double-decker', 'Double Decker Burger', 899)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="burgers">
+                    <div class="item-image">🍔</div>
+                    <div class="item-info">
+                        <h3>Mushroom Swiss Burger</h3>
+                        <p>Caramelized mushrooms with Swiss cheese</p>
+                        <div class="item-price">Rs: 849</div>
+                        <button class="add-to-cart" onclick="addToCart('mushroom-swiss', 'Mushroom Swiss Burger', 849)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="burgers">
+                    <div class="item-image">🍔</div>
+                    <div class="item-info">
+                        <h3>Crispy Fish Burger</h3>
+                        <p>Breaded fish fillet with tartar sauce</p>
+                        <div class="item-price">Rs: 799</div>
+                        <button class="add-to-cart" onclick="addToCart('fish-burger', 'Crispy Fish Burger', 799)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="burgers">
+                    <div class="item-image">🍔</div>
+                    <div class="item-info">
+                        <h3>Paneer Masala Burger</h3>
+                        <p>Indian-style paneer patty with spices</p>
+                        <div class="item-price">Rs: 699</div>
+                        <button class="add-to-cart" onclick="addToCart('paneer-burger', 'Paneer Masala Burger', 699)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="burgers">
+                    <div class="item-image">🍔</div>
+                    <div class="item-info">
+                        <h3>Vegan Burger</h3>
+                        <p>Plant-based patty with avocado spread</p>
+                        <div class="item-price">Rs: 899</div>
+                        <button class="add-to-cart" onclick="addToCart('vegan-burger', 'Vegan Burger', 899)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Salad Items -->
+                <div class="menu-item" data-category="salads">
+                    <div class="item-image">🥗</div>
+                    <div class="item-info">
+                        <h3>Caesar Salad</h3>
+                        <p>Crisp romaine lettuce with parmesan and croutons</p>
+                        <div class="item-price">Rs: 495</div>
+                        <button class="add-to-cart" onclick="addToCart('caesar-salad', 'Caesar Salad', 495)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="salads">
+                    <div class="item-image">🥗</div>
+                    <div class="item-info">
+                        <h3>Greek Salad</h3>
+                        <p>Fresh vegetables with feta cheese and olives</p>
+                        <div class="item-price">Rs: 455</div>
+                        <button class="add-to-cart" onclick="addToCart('greek-salad', 'Greek Salad', 455)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="salads">
+                    <div class="item-image">🥗</div>
+                    <div class="item-info">
+                        <h3>Chicken Salad</h3>
+                        <p>Grilled chicken with mixed greens and dressing</p>
+                        <div class="item-price">Rs: 599</div>
+                        <button class="add-to-cart" onclick="addToCart('chicken-salad', 'Chicken Salad', 599)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="salads">
+                    <div class="item-image">🥗</div>
+                    <div class="item-info">
+                        <h3>Fruit Salad</h3>
+                        <p>Fresh seasonal fruits with honey drizzle</p>
+                        <div class="item-price">Rs: 399</div>
+                        <button class="add-to-cart" onclick="addToCart('fruit-salad', 'Fruit Salad', 399)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="salads">
+                    <div class="item-image">🥗</div>
+                    <div class="item-info">
+                        <h3>Quinoa Salad</h3>
+                        <p>Quinoa with veggies & lemon dressing</p>
+                        <div class="item-price">Rs: 549</div>
+                        <button class="add-to-cart" onclick="addToCart('quinoa', 'Quinoa Salad', 549)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="salads">
+                    <div class="item-image">🥗</div>
+                    <div class="item-info">
+                        <h3>Pasta Salad</h3>
+                        <p>Penne, olives, veggies & Italian dressing</p>
+                        <div class="item-price">Rs: 599</div>
+                        <button class="add-to-cart" onclick="addToCart('pasta-salad', 'Pasta Salad', 599)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="salads">
+                    <div class="item-image">🥗</div>
+                    <div class="item-info">
+                        <h3>Kale & Walnut Salad</h3>
+                        <p>Superfood mix with walnuts & lemon</p>
+                        <div class="item-price">Rs: 699</div>
+                        <button class="add-to-cart" onclick="addToCart('kale-salad', 'Kale & Walnut Salad', 699)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="salads">
+                    <div class="item-image">🥗</div>
+                    <div class="item-info">
+                        <h3>Tuna Salad</h3>
+                        <p>Fresh tuna, mayo & greens</p>
+                        <div class="item-price">Rs: 799</div>
+                        <button class="add-to-cart" onclick="addToCart('tuna-salad', 'Tuna Salad', 799)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="salads">
+                    <div class="item-image">🥗</div>
+                    <div class="item-info">
+                        <h3>Avocado Salad</h3>
+                        <p>Avocado chunks with cherry tomatoes</p>
+                        <div class="item-price">Rs: 699</div>
+                        <button class="add-to-cart" onclick="addToCart('avocado-salad', 'Avocado Salad', 699)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="salads">
+                    <div class="item-image">🥗</div>
+                    <div class="item-info">
+                        <h3>Sprout Salad</h3>
+                        <p>Healthy sprouts, cucumber & lemon</p>
+                        <div class="item-price">Rs: 399</div>
+                        <button class="add-to-cart" onclick="addToCart('sprout-salad', 'Sprout Salad', 399)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="salad">
+                    <div class="item-image">🥗</div>
+                    <div class="item-info">
+                        <h3>Coleslaw</h3>
+                        <p>Cabbage, carrot, mayo.</p>
+                        <div class="item-price">Rs: 99</div>
+                        <button class="add-to-cart" onclick="addToCart('Coleslaw',99)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Dessert Items -->
+                <div class="menu-item" data-category="desserts">
+                    <div class="item-image">🍰</div>
+                    <div class="item-info">
+                        <h3>Chocolate Cake</h3>
+                        <p>Rich chocolate cake with creamy frosting</p>
+                        <div class="item-price">Rs: 425</div>
+                        <button class="add-to-cart" onclick="addToCart('chocolate-cake', 'Chocolate Cake', 425)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desserts">
+                    <div class="item-image">🍰</div>
+                    <div class="item-info">
+                        <h3>Cheesecake</h3>
+                        <p>Rich creamy cheesecake slice.</p>
+                        <div class="item-price">Rs: 149</div>
+                        <button class="add-to-cart" onclick="addToCart('Cheesecake',149)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desserts">
+                    <div class="item-image">🧁</div>
+                    <div class="item-info">
+                        <h3>Cupcakes</h3>
+                        <p>Vanilla & chocolate frosted cupcakes.</p>
+                        <div class="item-price">Rs: 129</div>
+                        <button class="add-to-cart" onclick="addToCart('Cupcakes',129)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desserts">
+                    <div class="item-image">🍩</div>
+                    <div class="item-info">
+                        <h3>Donuts</h3>
+                        <p>Glazed donuts with sprinkles.</p>
+                        <div class="item-price">Rs: 119</div>
+                        <button class="add-to-cart" onclick="addToCart('Donuts',119)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desserts">
+                    <div class="item-image">🍦</div>
+                    <div class="item-info">
+                        <h3>Ice Cream</h3>
+                        <p>Vanilla ice cream with chocolate chips</p>
+                        <div class="item-price">Rs: 199</div>
+                        <button class="add-to-cart" onclick="addToCart('ice-cream', 'Ice Cream', 199)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desserts">
+                    <div class="item-image">🍪</div>
+                    <div class="item-info">
+                        <h3>Chocolate Chip Cookies</h3>
+                        <p>Fresh baked chocolate chip cookies (6 pack)</p>
+                        <div class="item-price">Rs: 299</div>
+                        <button class="add-to-cart" onclick="addToCart('cookies', 'Chocolate Chip Cookies', 299)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desserts">
+                    <div class="item-image">🍪</div>
+                    <div class="item-info">
+                        <h3>Oatmeal Raisin Cookies</h3>
+                        <p>Soft and chewy with oats & raisins</p>
+                        <div class="item-price">Rs: 279</div>
+                        <button class="add-to-cart" onclick="addToCart('oatmeal', 'Oatmeal Raisin Cookies', 279)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desserts">
+                    <div class="item-image">🍪</div>
+                    <div class="item-info">
+                        <h3>Red Velvet Cookies</h3>
+                        <p>Cookies with cream cheese filling</p>
+                        <div class="item-price">Rs: 349</div>
+                        <button class="add-to-cart" onclick="addToCart('redvelvet', 'Red Velvet Cookies', 349)">Add to Cart</button>
+                    </div>
+                </div>
+    
+                <div class="menu-item" data-category="desserts">
+                    <div class="item-image">🍫</div>
+                    <div class="item-info">
+                        <h3>Brownie with Ice Cream</h3>
+                        <p>Warm chocolate brownie, vanilla scoop.</p>
+                        <div class="item-price">Rs: 179</div>
+                        <button class="add-to-cart" onclick="addToCart('Brownie with Ice Cream',179)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desserts">
+                    <div class="item-image">🍮</div>
+                    <div class="item-info">
+                        <h3>Pudding</h3>
+                        <p>Creamy caramel pudding.</p>
+                        <div class="item-price">Rs: 139</div>
+                        <button class="add-to-cart" onclick="addToCart('Pudding',139)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desserts">
+                    <div class="item-image">🍫</div>
+                    <div class="item-info">
+                        <h3>Chocolate Lava Cake</h3>
+                        <p>Soft cake with molten chocolate.</p>
+                        <div class="item-price">Rs: 159</div>
+                        <button class="add-to-cart" onclick="addToCart('Chocolate Lava Cake',159)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desserts">
+                    <div class="item-image">🍯</div>
+                    <div class="item-info">
+                        <h3>Gulab Jamun</h3>
+                        <p>Traditional Indian sweet.</p>
+                        <div class="item-price">Rs: 99</div>
+                        <button class="add-to-cart" onclick="addToCart('Gulab Jamun',99)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="desserts">
+                    <div class="item-image">🍬</div>
+                    <div class="item-info">
+                        <h3>Macarons</h3>
+                        <p>French cookies (6 pcs).</p>
+                        <div class="item-price">Rs: 149</div>
+                        <button class="add-to-cart" onclick="addToCart('Macarons',149)">Add to Cart</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>QuickBite</h3>
+                    <ul>
+                        <li><p>Delivering happiness one meal at a time</p></li>
+                        <li><p>Your favorite meals, crafted with love and delivered fresh to your doorstep.</p></li>
+                        <li><p>QuickBite - because great food makes great moments.</p></li>
+                        <li><p>Hygiene and safety are at the heart of everything we prepare.</p></li>
+                        <li><p>Every bite is a promise of quality and care.</p></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="checkout.html">Checkout</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📞 +91 8159056500</p>
+                    <p>📧 susmita@quickbite.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 QuickBite. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
