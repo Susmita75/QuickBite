@@ -19,13 +19,20 @@ This project simulates an online food ordering experience with a clean and moder
 
 ## 📂 Project Structure
 QuickBite/
-│── index.html # Homepage
-│── menu.html # Menu page
-│── contact.html # Contact page
-│── style.css # Styles
-│── script.js # JavaScript functionality
-│── images/ # Food images / icons
-│── README.md # Project documentation
+│── index.html         # Homepage (Hero, Featured, Footer)
+│── menu.html          # Menu page with food categories
+│── contact.html       # Contact page with form & info
+│── checkout.html      # Checkout page with cart details
+│
+├── css/
+│   └── style.css      # Stylesheet
+│
+├── js/
+│   └── script.js      # JavaScript functionality (menu filter, cart, etc.)
+│
+├── images/            # All images, icons, and assets
+│
+├── README.md          # Project documentation
 
 ## 💡 Future Improvements
 
