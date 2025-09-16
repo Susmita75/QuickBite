@@ -45,3 +45,6 @@ QuickBite/
 - Real-time order tracking
 
 - Enhance UI with animations
+
+## 👉 Live Demo
+- https://susmita75.github.io/QuickBite/
